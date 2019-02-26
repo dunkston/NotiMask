@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Edit Mask</string>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>bundle</key>
+			<string>AppList</string>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>isController</key>
+			<true/>
+			<key>label</key>
+			<string>Masked Apps</string>
+			<key>ALSettingsKeyPrefix</key>
+			<string>enabled-</string>
+			<key>ALSettingsPath</key>
+			<string>/var/mobile/Library/Preferences/com.dunkston.notimask.plist</string>
+			<key>ALSectionDescriptors</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>System Applications</string>
+					<key>predicate</key>
+					<string>isSystemApplication = TRUE</string>
+					<key>icon-size</key>
+					<real>29</real>
+					<key>suppress-hidden-apps</key>
+					<true/>
+					<key>cell-class-name</key>
+					<string>ALSwitchCell</string>
+					<key>default</key>
+					<false/>
+					<key>display-identifier-macro</key>
+					<string>@@DISPLAYIDENTIFIER@@</string>
+					<key>key</key>
+					<string>@@DISPLAYIDENTIFIER@@</string>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>User Applications</string>
+					<key>predicate</key>
+					<string>isSystemApplication = FALSE</string>
+					<key>icon-size</key>
+					<real>29</real>
+					<key>suppress-hidden-apps</key>
+					<true/>
+					<key>cell-class-name</key>
+					<string>ALSwitchCell</string>
+					<key>default</key>
+					<false/>
+					<key>display-identifier-macro</key>
+					<string>@@DISPLAYIDENTIFIER@@</string>
+					<key>key</key>
+					<string>@@DISPLAYIDENTIFIER@@</string>
+					<key>footer-title</key>
+					<string>NotiMask by dunkston</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Fake Notification</string>
+			<key>footerText</key>
+			<string>- dunkston -</string>
+			<key>footerAlignment</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>bundle</key>
+			<string>AppList</string>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>isController</key>
+			<true/>
+			<key>label</key>
+			<string>Fake App</string>
+			<key>ALSingleEnabledMode</key>
+			<true/>
+			<key>ALSettingsKey</key>
+			<string>app</string>
+			<key>ALChangeNotification</key>
+			<string>com.dunkston.notimask.preferencesChanged</string>
+			<key>ALSettingsPath</key>
+			<string>/var/mobile/Library/Preferences/com.dunkston.notimask.plist</string>
+			<key>ALSectionDescriptors</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>System Applications</string>
+					<key>predicate</key>
+					<string>isSystemApplication = TRUE</string>
+					<key>icon-size</key>
+					<real>29</real>
+					<key>suppress-hidden-apps</key>
+					<true/>
+					<key>cell-class-name</key>
+					<string>ALCheckCell</string>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>User Applications</string>
+					<key>predicate</key>
+					<string>isSystemApplication = FALSE</string>
+					<key>icon-size</key>
+					<real>29</real>
+					<key>suppress-hidden-apps</key>
+					<true/>
+					<key>cell-class-name</key>
+					<string>ALCheckCell</string>
+					<key>footer-title</key>
+					<string>NotiMask by dunkston</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>detail</key>
+			<string>PSDetailController</string>
+			<key>defaults</key>
+			<string>com.dunkston.notimask</string>
+			<key>label</key>
+			<string>Title</string>
+			<key>key</key>
+			<string>title</string>
+			<key>placeholder</key>
+			<string>orig for original text</string>
+			<key>PostNotification</key>
+			<string>com.dunkston.notimask.preferencesChanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>detail</key>
+			<string>PSDetailController</string>
+			<key>defaults</key>
+			<string>com.dunkston.notimask</string>
+			<key>label</key>
+			<string>Message</string>
+			<key>key</key>
+			<string>message</string>
+			<key>placeholder</key>
+			<string>orig for original text</string>
+			<key>PostNotification</key>
+			<string>com.dunkston.notimask.preferencesChanged</string>
+		</dict>
+	</array>
+</dict>
+</plist>
